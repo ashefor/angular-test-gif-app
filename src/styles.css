@@ -41,7 +41,7 @@ h5 {
     font-weight: 700;
 }
 .btn {
-    background-color: #333;
+    background-color: #333 !important;
     color: #fff;
     font-size: 15px;
     font-weight: 600;
