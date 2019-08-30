@@ -1,15 +1,11 @@
-<!-- <div> -->
-    <!-- Implement result list here -->
-    <!-- Results List -->
-<!-- </div> -->
-
-
-<div class="masonry">
-    <div *ngFor="let gif of allGifsResult" class="item">
-        <div [routerLink]="['/gif-details', gif.id]" >
-           <a>
-            <img class="" [src]="gif.images.original.url" alt="">
-           </a>
+<cdk-virtual-scroll-viewport itemSize="50" class="vprt" (scrolledIndexChange)="handler($event)">
+    <div class="masonry">
+        <div *cdkVirtualFor="let gif of allGifsResult" class="item">
+            <div [routerLink]="['/gif-details', gif.id]" >
+               <a>
+                <img class="" [src]="gif.images.original.url" alt="">
+               </a>
+            </div>
         </div>
     </div>
-</div>
+</cdk-virtual-scroll-viewport>

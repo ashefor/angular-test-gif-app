@@ -7,7 +7,10 @@ import { SearchFieldComponent } from './search-field/search-field.component';
 import { ResultsListComponent } from './results-list/results-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { GifDetailsComponent } from './gif-details/gif-details.component'
+import { GifDetailsComponent } from './gif-details/gif-details.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {ScrollingModule, ScrollDispatcher} from '@angular/cdk/scrolling';
+
 
 @NgModule({
   declarations: [
@@ -20,9 +23,13 @@ import { GifDetailsComponent } from './gif-details/gif-details.component'
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ScrollingModule 
   ],
-  providers: [],
+  providers: [
+    ScrollDispatcher
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

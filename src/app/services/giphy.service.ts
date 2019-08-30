@@ -14,8 +14,8 @@ export class GiphyService {
   getResults(){
     return this.http.get(`${this.getUrl}search?q=ferrari&api_key=${this.apiKey}`)
   }
-  searchDatabase(itemToFind: any){
-    return this.http.get(`${this.getUrl}search?api_key=${this.apiKey}&q=${itemToFind}&limit=50`)
+  searchDatabase(itemToFind: any, limit, offset){
+    return this.http.get(`${this.getUrl}search?api_key=${this.apiKey}&q=${itemToFind}&limit=${limit}&offset=${offset}`)
   }
   getSingleGif(gifId: any){
     return this.http.get(`${this.getUrl}${gifId}`)
