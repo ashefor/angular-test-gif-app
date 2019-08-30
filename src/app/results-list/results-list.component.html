@@ -1,4 +1,15 @@
-<div>
+<!-- <div> -->
     <!-- Implement result list here -->
-    Results List
+    <!-- Results List -->
+<!-- </div> -->
+
+
+<div class="masonry">
+    <div *ngFor="let gif of allGifsResult" class="item">
+        <div [routerLink]="['/gif-details', gif.id]" >
+           <a>
+            <img class="" [src]="gif.images.original.url" alt="">
+           </a>
+        </div>
+    </div>
 </div>

@@ -1,0 +1,17 @@
+<div class="gifdetails">
+  <div class="item">
+  <img src="{{allgifs.images?.original.url}}" alt="">
+  </div>
+  <p class="lead text-center">
+    Gif type: {{allgifs.type}}
+  </p>
+  <p class="lead text-center">
+    Rating: {{allgifs.rating}}
+  </p>
+  <p class="lead text-center">
+    Date added: {{allgifs.import_datetime | date}}
+  </p>
+  <p class="lead text-center">
+    Who added it: {{allgifs.username? allgifs.username: 'Unknown'}}
+  </p>
+</div>
